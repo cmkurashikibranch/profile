@@ -25,7 +25,9 @@
 | ファイル | `index.html`（単一HTML+インラインCSS・外部依存なし） |
 | 目的 | 仕事・営業の相手に「何ができる人か」を伝える |
 | ターゲット | 仕事・営業の相手（守成クラブでのPRと相性◎） |
-| 公開方法 | GitHub Pages（予定） |
+| 公開方法 | GitHub Pages（公開済み） |
+| 公開URL | `https://cmkurashikibranch.github.io/profile/` |
+| リポジトリ | `https://github.com/cmkurashikibranch/profile`（パブリック・masterルート） |
 
 ---
 
@@ -74,8 +76,8 @@
 | 企画・ヒアリング（逆質問5項目） | ✅ 完了 |
 | デザイン方針決定 | ✅ 完了 |
 | index.html 実装（プレースホルダー入り） | ✅ 完了 |
-| 個人情報の差し替え（名前・肩書き等） | 🔲 ユーザー作業待ち |
-| GitHub Pages 公開 | 🔲 未着手 |
+| GitHub Pages 公開 | ✅ 完了（2026-06-18・コミット `af57764`・HTTP 200確認済み） |
+| 個人情報の差し替え（名前・肩書き等） | 🔲 ユーザー作業待ち（仮の内容のまま公開中・URL共有は書き換え後推奨） |
 
 ---
 
