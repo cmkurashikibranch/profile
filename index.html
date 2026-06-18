@@ -4,152 +4,388 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ▼▼ ここを書き換え：ブラウザのタブやSNSに出るタイトル ▼▼ -->
-<title>自己紹介｜お名前</title>
-<meta name="description" content="〇〇のプロフィールページです。">
+<title>河上和広｜AI・DXで業務をかんたんに</title>
+<meta name="description" content="河上和広のプロフィールページです。現場の「めんどう」を、ITでちょっと軽くする人。AI・DXで個人事業主の業務をかんたんにします。">
+<!-- ▼ SNSで共有したときの表示（OGP）。url と image は公開後に差し替え -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="河上和広｜AI・DXで業務をかんたんに">
+<meta property="og:description" content="現場の「めんどう」を、ITでちょっと軽くする人。AI・DXで個人事業主の業務をかんたんにします。">
+<meta property="og:url" content="https://cmkurashikibranch.github.io/profile/">
+<meta property="og:image" content="https://cmkurashikibranch.github.io/profile/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
 <!-- ▲▲ ここまで ▲▲ -->
+<meta name="theme-color" content="#FAF7F2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff;
-    --text: #1f2937;
-    --text-sub: #6b7280;
-    --accent: #2563eb;       /* アクセント色（1色だけ控えめに使用） */
-    --accent-soft: #eff4ff;
-    --border: #e5e7eb;
-    --card: #ffffff;
-    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+    --bg: #FAF7F2;          /* 温かみのあるクリーム背景 */
+    --cream-2: #F7EFDF;     /* サブ面・ゴールド寄りのクリーム */
+    --dark: #1A1A1A;        /* ダークセクション */
+    --text: #37352F;        /* 黒に近い温かいダークグレー */
+    --text-sub: #646459;    /* 補足テキスト（AA確保のため一段暗く） */
+    --green: #047857;       /* ディープエメラルド（アクセント・ボタン） */
+    --green-deep: #065F46;
+    --gold: #7A5A22;        /* ゴールド（明朝の強調・AA確保のため一段暗く） */
+    --gold-bright: #C9A24B; /* ダーク背景上のゴールド */
+    --border: #E7E1D6;
+    --white: #ffffff;
+    --shadow: 0 1px 2px rgba(55,53,47,.04), 0 8px 24px rgba(55,53,47,.06);
+    --serif: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+    --sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", system-ui, sans-serif;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+    font-family: var(--sans);
     color: var(--text);
     background: var(--bg);
-    line-height: 1.8;
+    line-height: 1.9;
     -webkit-font-smoothing: antialiased;
   }
 
   .wrap {
-    max-width: 760px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 24px;
   }
 
-  /* ===== ① プロフィール ===== */
+  /* ===== ヘッダー（所属ロゴ） ===== */
+  header {
+    padding: 22px 0;
+  }
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-family: var(--serif);
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    color: var(--text);
+  }
+  .logo em {
+    font-style: italic;
+    color: var(--gold);
+    padding: 0 1px;
+  }
+  .logo-sub {
+    font-size: 12px;
+    color: var(--text-sub);
+    letter-spacing: .04em;
+  }
+
+  /* ===== ① プロフィール（ヒーロー） ===== */
   .profile {
     text-align: center;
-    padding: 88px 24px 64px;
+    padding: 56px 24px 72px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    letter-spacing: .02em;
+    box-shadow: 0 1px 2px rgba(55,53,47,.04);
+    margin-bottom: 36px;
+  }
+  .badge .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 0 3px rgba(4,120,87,.15);
   }
 
   .avatar {
-    width: 120px;
-    height: 120px;
+    width: 116px;
+    height: 116px;
     border-radius: 50%;
-    margin: 0 auto 28px;
-    background: var(--accent-soft);
-    color: var(--accent);
+    margin: 0 auto 30px;
+    background: var(--cream-2);
+    color: var(--gold);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 44px;
-    font-weight: 700;
+    font-family: var(--serif);
+    font-size: 46px;
+    font-weight: 600;
     overflow: hidden;
+    border: 1px solid var(--border);
   }
-  /* 写真を使う場合：上の文字を消して <img src="photo.jpg"> を入れる */
+  /* 写真を使う場合：下の文字を消して <img src="photo.jpg"> を入れる */
   .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
   .name {
-    font-size: 30px;
+    font-family: var(--serif);
+    font-size: 40px;
     font-weight: 700;
-    letter-spacing: 0.02em;
-    margin-bottom: 8px;
+    letter-spacing: .03em;
+    line-height: 1.3;
+    margin-bottom: 14px;
   }
 
   .title {
-    font-size: 16px;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 15px;
+    color: var(--text-sub);
+    font-weight: 500;
+    letter-spacing: .06em;
+    margin-bottom: 26px;
   }
 
+  /* キャッチコピー：明朝体・2行目をゴールドで強調（参考サイト踏襲） */
   .catch {
-    font-size: 16px;
-    color: var(--text-sub);
-    max-width: 520px;
+    font-family: var(--serif);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1.65;
+    letter-spacing: .02em;
+    max-width: 600px;
     margin: 0 auto;
+  }
+  .catch .accent { color: var(--gold); }
+
+  .catch-sub {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--text-sub);
+    margin-top: 22px;
+  }
+
+  /* キーボード操作時のフォーカス可視（リンク追加時に効く） */
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 
   /* ===== ② できること・スキル ===== */
   .section {
-    padding: 56px 0 96px;
+    padding: 72px 0 88px;
     border-top: 1px solid var(--border);
   }
 
-  .section-title {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: var(--text-sub);
+  .eyebrow {
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .22em;
+    color: var(--green);
+    margin-bottom: 10px;
   }
-  .section-title span {
-    display: inline-block;
-    padding-bottom: 6px;
-    border-bottom: 2px solid var(--accent);
-    color: var(--text);
+  .section-title {
+    font-family: var(--serif);
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: .03em;
+    margin-bottom: 44px;
   }
 
   .cards {
     display: grid;
-    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
   }
 
   .card {
-    background: var(--card);
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px 26px;
+    border-radius: 16px;
+    padding: 28px 28px 26px;
     box-shadow: var(--shadow);
-    transition: transform .15s ease, box-shadow .15s ease;
+    transition: transform .16s ease, box-shadow .16s ease;
   }
   .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(55,53,47,.10);
   }
 
-  .card h3 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 8px;
+  .card .icon {
+    width: 46px; height: 46px;
+    border-radius: 12px;
+    background: var(--cream-2);
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    font-size: 22px;
+    margin-bottom: 16px;
   }
-  .card .icon {
-    font-size: 20px;
-    line-height: 1;
+  .card h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: .02em;
   }
   .card p {
     font-size: 15px;
     color: var(--text-sub);
+    line-height: 1.85;
   }
+
+  /* ===== ③ 作ったもの（実績） ===== */
+  .works { padding: 0 0 88px; }
+  .work-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: var(--shadow);
+    transition: transform .16s ease, box-shadow .16s ease;
+  }
+  .work-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(55,53,47,.10);
+  }
+  .work-card .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--green);
+    background: rgba(4,120,87,.08);
+    border-radius: 999px;
+    padding: 4px 11px;
+    margin-bottom: 14px;
+  }
+  .work-card h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 9px;
+    letter-spacing: .02em;
+  }
+  .work-card p {
+    font-size: 15px;
+    color: var(--text-sub);
+    line-height: 1.85;
+    margin-bottom: 14px;
+  }
+  .work-card .more {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: .04em;
+  }
+  .work-card[href]:hover .more { text-decoration: underline; }
+
+  /* ===== ダークなクロージング ===== */
+  .closing {
+    background: var(--dark);
+    color: #F3F0EA;
+    text-align: center;
+    padding: 72px 24px;
+  }
+  .closing .eyebrow { color: var(--gold-bright); }
+  .closing-title {
+    font-family: var(--serif);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: .03em;
+  }
+  .closing-title .accent { color: var(--gold-bright); }
+  .closing p {
+    font-size: 15px;
+    color: #B8B2A8;
+    margin-top: 18px;
+  }
+  .cta-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .03em;
+    text-decoration: none;
+    transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-line { background: var(--green); color: #fff; }
+  .btn-line:hover { background: #059669; }
+  .btn-mail {
+    background: transparent;
+    color: #F3F0EA;
+    border: 1px solid rgba(255,255,255,.32);
+  }
+  .btn-mail:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
 
   /* ===== フッター ===== */
   footer {
+    background: var(--dark);
     text-align: center;
-    padding: 32px 24px 48px;
-    color: var(--text-sub);
+    padding: 0 24px 44px;
+    color: #9A9488;
     font-size: 13px;
+    letter-spacing: .04em;
+  }
+  footer .rule {
+    max-width: 800px;
+    margin: 0 auto 28px;
+    border-top: 1px solid rgba(255,255,255,.08);
   }
 
-  @media (max-width: 480px) {
-    .profile { padding: 64px 20px 48px; }
-    .name { font-size: 26px; }
+  @media (max-width: 600px) {
+    .profile { padding: 40px 20px 56px; }
+    .avatar { margin-bottom: 22px; }
+    .name { font-size: 32px; }
+    .catch { font-size: 21px; }
+    .cards { grid-template-columns: 1fr; }
+    .logo-sub { display: none; }
+  }
+
+  /* 動きを抑える設定の人には控える */
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    .card:hover { transform: none; }
+  }
+
+  /* 印刷時：ダーク面を白地・黒文字に、装飾を除く */
+  @media print {
+    body { background: #fff; }
+    .closing, footer { background: #fff; color: #000; }
+    .closing .eyebrow, .closing-title, .closing-title .accent,
+    .closing p, footer { color: #000 !important; }
+    .card { box-shadow: none; transition: none; }
+    .card:hover { transform: none; }
+    footer .rule { border-top-color: #ccc; }
   }
 </style>
 </head>
 <body>
+
+  <!-- ====================================================== -->
+  <!--  ヘッダー：所属（Light the Light メンバー）             -->
+  <!-- ====================================================== -->
+  <header>
+    <div class="wrap">
+      <span class="logo">Light<em>the</em>Light</span>
+      <span class="logo-sub">メンバー</span>
+    </div>
+  </header>
 
   <!-- ====================================================== -->
   <!--  ① プロフィール                                         -->
@@ -157,16 +393,18 @@
   <!-- ====================================================== -->
   <section class="profile">
     <div class="wrap">
-      <div class="avatar">
-        <!-- 写真を使う場合：下の「お」を消して <img src="photo.jpg" alt="プロフィール写真"> を入れる -->
-        お
+      <span class="badge"><span class="dot"></span>AI活用 × DXサポート</span>
+      <div class="avatar" aria-hidden="true">
+        <!-- 写真を使う場合：下の「河」を消して <img src="photo.jpg" alt="プロフィール写真" width="116" height="116"> を入れる -->
+        河
       </div>
-      <h1 class="name">お名前 太郎</h1>
+      <h1 class="name">河上 和広</h1>
       <p class="title">ケアマネジャー / DXサポート</p>
       <p class="catch">
-        現場の「めんどう」を、ITでちょっと軽くする人です。<br>
-        身近な業務の効率化アプリを自分で作っています。
+        現場の「めんどう」を、<br>
+        <span class="accent">ITでちょっと軽くする人</span>です。
       </p>
+      <p class="catch-sub">身近な業務の効率化アプリを、自分の手で作っています。</p>
     </div>
   </section>
 
@@ -176,26 +414,31 @@
   <!-- ====================================================== -->
   <section class="section">
     <div class="wrap">
-      <p class="section-title"><span>できること・スキル</span></p>
+      <p class="eyebrow" lang="en">WHAT I DO</p>
+      <h2 class="section-title">できること・スキル</h2>
       <div class="cards">
 
         <div class="card">
-          <h3><span class="icon">💻</span>業務のDXサポート</h3>
+          <div class="icon" aria-hidden="true">💻</div>
+          <h3>業務のDXサポート</h3>
           <p>紙やExcelでの手作業を、かんたんに使えるツールに置き換えます。「これ自動にできない？」のご相談から。</p>
         </div>
 
         <div class="card">
-          <h3><span class="icon">📱</span>アプリ・Webツール制作</h3>
+          <div class="icon" aria-hidden="true">📱</div>
+          <h3>アプリ・Webツール制作</h3>
           <p>予約フォーム・スケジュール管理・名刺台帳など、現場で本当に使える小さなアプリを作っています。</p>
         </div>
 
         <div class="card">
-          <h3><span class="icon">🏥</span>介護・ケアマネ業務の知識</h3>
+          <div class="icon" aria-hidden="true">🏥</div>
+          <h3>介護・ケアマネ業務の知識</h3>
           <p>ケアマネジャーとして現場を知っているからこそ、「使う人の気持ち」に寄り添った仕組みを提案できます。</p>
         </div>
 
         <div class="card">
-          <h3><span class="icon">🤝</span>かんたんな言葉での相談対応</h3>
+          <div class="icon" aria-hidden="true">🤝</div>
+          <h3>かんたんな言葉での相談対応</h3>
           <p>専門用語は使いません。ITが苦手な方にも、わかる言葉で一緒に考えます。</p>
         </div>
 
@@ -203,8 +446,72 @@
     </div>
   </section>
 
+  <!-- ====================================================== -->
+  <!--  ③ 作ったもの（実績）                                   -->
+  <!--  ▼ カードを増減・編集してください。href に公開URLを入れる -->
+  <!-- ====================================================== -->
+  <section class="works">
+    <div class="wrap">
+      <p class="eyebrow" lang="en">WORKS</p>
+      <h2 class="section-title">作ったもの</h2>
+      <div class="cards">
+
+        <a class="work-card" href="https://cmkurashikibranch.github.io/customer-note/" target="_blank" rel="noopener">
+          <span class="tag">名刺・顧客管理</span>
+          <h3>お客様ノート</h3>
+          <p>名刺をスマホで撮ると、AIが名前・会社・電話番号を自動で読み取り、台帳に登録。次の連絡もうながします。</p>
+          <span class="more">サイトを見る →</span>
+        </a>
+
+        <a class="work-card" href="https://cmkurashikibranch.github.io/schedule/" target="_blank" rel="noopener">
+          <span class="tag">スケジュール管理</span>
+          <h3>ケアマネ向け予定管理</h3>
+          <p>訪問・会議・研修を1画面で。ドラッグで予定を動かせて、月間カレンダーは印刷にも対応しています。</p>
+          <span class="more">サイトを見る →</span>
+        </a>
+
+        <a class="work-card" href="https://cmkurashikibranch.github.io/pomodoro/" target="_blank" rel="noopener">
+          <span class="tag">集中タイマー</span>
+          <h3>ポモドーロタイマー</h3>
+          <p>25分の集中と休憩をくり返す作業用タイマー。スマホのホーム画面にも追加できます。</p>
+          <span class="more">サイトを見る →</span>
+        </a>
+
+        <div class="work-card">
+          <span class="tag">LINE予約システム</span>
+          <h3>美容室向け予約フォーム</h3>
+          <p>LINEから予約を受け付け、完了とリマインドを自動通知。予約はカレンダー・スプレッドシートにも反映されます。</p>
+          <span class="more">開発実績</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!--  クロージング                                           -->
+  <!-- ====================================================== -->
+  <section class="closing">
+    <div class="wrap">
+      <p class="eyebrow" lang="en">LET'S TALK</p>
+      <p class="closing-title">
+        その「めんどう」、<br>
+        <span class="accent">いちど話してみませんか。</span>
+      </p>
+      <p>小さな困りごとからで大丈夫です。お気軽にお声がけください。</p>
+      <!-- ▼ 連絡先は枠だけ用意。あとで href を本物に差し替える -->
+      <!--   LINE  : href="https://lin.ee/xxxxxxx" に変更                -->
+      <!--   メール : href="mailto:あなたのアドレス" に変更               -->
+      <div class="cta-row">
+        <a class="btn btn-line" href="#" aria-disabled="true">LINEで相談する</a>
+        <a class="btn btn-mail" href="#" aria-disabled="true">メールで相談する</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    © <span id="year"></span> お名前 太郎
+    <div class="rule"></div>
+    © <span id="year"></span> 河上 和広
   </footer>
 
   <script>
